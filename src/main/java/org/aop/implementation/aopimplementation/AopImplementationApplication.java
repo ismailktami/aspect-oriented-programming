@@ -20,10 +20,13 @@ public class AopImplementationApplication {
 	}
 
 	@Bean
-	CommandLineRunner start(PersonneRepository personneRepository){
-		return  args -> personneRepository.save(new Personne("ktami","ismail",22));
+	CommandLineRunner start(PersonneRepository personneRepository) {
+		return args -> {
+			personneRepository.save(new Personne("ktami", "ismail", 22));
+			personneRepository.save(new Personne("hassan", "hassan", 45));
+			personneRepository.findById(1L);
+		};
+
+
 	}
-
-
-
 }
