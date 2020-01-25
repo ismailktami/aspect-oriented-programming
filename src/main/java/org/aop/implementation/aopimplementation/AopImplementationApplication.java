@@ -19,6 +19,8 @@ public class AopImplementationApplication {
 
 	}
 
+
+
 	@Bean
 	CommandLineRunner start(PersonneRepository personneRepository) {
 		return args -> {
