@@ -11,4 +11,14 @@ public interface PersonneRepository  extends JpaRepository<Personne,Long> {
     @Override
     @Loggable
     List<Personne> findAll();
+
+
+    @Override
+    @Controlled
+    void delete(Personne object);
+
+
+    @Override
+    @Controlled
+    <S extends Personne> S save(S s);
 }

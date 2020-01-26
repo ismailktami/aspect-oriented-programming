@@ -27,7 +27,13 @@ public class AopImplementationApplication {
 			personneRepository.save(new Personne("ktami", "ismail", 22));
 			personneRepository.save(new Personne("hassan", "hassan", 45));
 			personneRepository.findById(1L);
+			personneRepository.delete(personneRepository.findById(2L).get());
+
+
+
+
 		};
+
 
 
 	}
