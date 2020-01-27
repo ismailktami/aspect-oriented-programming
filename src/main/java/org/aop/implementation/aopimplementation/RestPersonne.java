@@ -13,10 +13,13 @@ public class RestPersonne {
     @Autowired
     private PersonneRepository personneRepository;
 
+
+
     @GetMapping("getAll")
     public List<Personne> findAll(){
         return personneRepository.findAll();
     }
+
     @GetMapping("/personnes/{id}")
     public Personne findById(@PathVariable(name = "id") Long id){
         return personneRepository.findById(id).get();
